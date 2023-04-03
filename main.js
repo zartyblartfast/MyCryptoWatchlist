@@ -93,11 +93,23 @@ async function renderTags() {
   }
  
   renderCGWidget_Coin_Compare_Chart();
+
+  // Add the contact information below the Coin Compare Chart widget
+  const contactInfo = `
+    <div class="contact-info">
+      <p>Get in touch: <a href="mailto:techdibdabs@gmail.com">techdibdabs@gmail.com</a></p>
+      <p>Buy me a coffee: <a href="https://paypal.me/techdibdabs" target="_blank">https://paypal.me/techdibdabs</a></p>
+    </div>
+  `;
+  const thirdColumn = document.querySelector('.column:nth-child(3)');
+  thirdColumn.insertAdjacentHTML('beforeend', contactInfo);
 }
 
 async function renderCGWidget_Coin_Compare_Chart() {
   const selectedCoinIds = selectedCoins.map(coin => coin.id).join(',');
   if (!selectedCoinIds) return;
+
+  console.log('Selected coin IDs:', selectedCoinIds);
 
   const thirdColumn = document.querySelector('.column:nth-child(3)'); // Select the third column
   thirdColumn.innerHTML = '';

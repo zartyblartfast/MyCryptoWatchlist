@@ -73,6 +73,10 @@ body {
     width: 100%;
 }
 
+.search-container {
+    position: relative;
+}
+
 #market-ticker-container {
     display: inline-flex;
     vertical-align: top;
