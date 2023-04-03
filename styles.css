@@ -160,3 +160,11 @@ body {
     flex-grow: 1;
 }
 
+.contact-info-container {
+    width: 400px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+  }
+  

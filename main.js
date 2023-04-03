@@ -92,17 +92,19 @@ async function renderTags() {
     marketTickerContainer.innerHTML = '';
   }
  
-  renderCGWidget_Coin_Compare_Chart();
+  await renderCGWidget_Coin_Compare_Chart()
 
-  // Add the contact information below the Coin Compare Chart widget
+  // Add the contact information above the Coin Compare Chart widget
   const contactInfo = `
-    <div class="contact-info">
-      <p>Get in touch: <a href="mailto:techdibdabs@gmail.com">techdibdabs@gmail.com</a></p>
-      <p>Buy me a coffee: <a href="https://paypal.me/techdibdabs" target="_blank">https://paypal.me/techdibdabs</a></p>
+    <div class="contact-info-container">
+      <div class="contact-info">
+        <p>Get in touch: <a href="mailto:techdibdabs@gmail.com">techdibdabs@gmail.com</a></p>
+        <p>Buy me a coffee: <a href="https://paypal.me/techdibdabs" target="_blank">https://paypal.me/techdibdabs</a></p>
+      </div>
     </div>
   `;
   const thirdColumn = document.querySelector('.column:nth-child(3)');
-  thirdColumn.insertAdjacentHTML('beforeend', contactInfo);
+  thirdColumn.querySelector('coingecko-coin-compare-chart-widget').insertAdjacentHTML('beforebegin', contactInfo);
 }
 
 async function renderCGWidget_Coin_Compare_Chart() {
