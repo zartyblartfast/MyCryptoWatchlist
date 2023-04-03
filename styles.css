@@ -137,7 +137,7 @@ body {
     grid-template-rows: auto auto;
     width: 100%;
     align-items: flex-start;
-    grid-gap: 20px;
+    grid-gap: 10px;
 }
 
 .column {
