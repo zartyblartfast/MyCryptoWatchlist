@@ -52,7 +52,7 @@ async function renderTags() {
     if (index === 0) tag.classList.add('tag-selected');
 
     tag.addEventListener('click', async (event) => {
-      console.log('Tag clicked:', tag.textContent);  // console log output 
+      //console.log('Tag clicked:', tag.textContent); 
       const allTags = tagContainer.querySelectorAll('.tag');
       allTags.forEach(t => t.classList.remove('tag-selected'));
 
