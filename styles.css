@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+  
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+  
+.trending-ticker-container {
+    background-color: #ffffff;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+  
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+  
+#coin-search {
+    width: 200px;
+    margin-bottom: 10px;
+}
+  
+#coin-search-results {
+    position: absolute;
+    background-color: white;
+    z-index: 10;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    max-height: 300px;
+    width: 390px;
+    margin-bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+  
+.coin-search-result {
+    display: flex;
+    width: 100%;
+    padding: 3px 8px;
+    cursor: pointer;
+    align-items: center;
+}
+  
+.coin-search-results-active {
+    display: block;
+}
+  
+.widgets-container {
+    display: grid;
+    grid-template-columns: auto auto 1fr; /* Change the first 'auto' to the desired width */
+    grid-template-rows: auto auto;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.column:nth-child(1) { /* Add this rule to set the width of the first column */
+    width: 400px;
+}
+  
+.grid-item {
+    width: 100%;
+}
+  
+#chart-container,
+#coin-list-widget-container {
+    display: inline-flex;
+    vertical-align: top;
+    width: 100%;
+}
+  
+#market-ticker-container {
+    display: inline-flex;
+    vertical-align: top;
+    width: 100%;
+    margin-bottom: 20px;
+    align-self: stretch;
+}
+  
+.tag {
+    display: inline-flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 3px 8px;
+    margin: 2px;
+    cursor: pointer;
+}
+  
+.tag-selected {
+    background-color: #d0d0d0;
+}
+  
+.remove-tag {
+    margin-left: 5px;
+    cursor: pointer;
+}
+  
+.search-container {
+    position: relative;
+}
+  
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 200px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
